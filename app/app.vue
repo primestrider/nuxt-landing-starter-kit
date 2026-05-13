@@ -7,12 +7,11 @@ useHead(() => ({
   },
 }));
 </script>
+
 <template>
   <UApp>
-    <main>
-      <UMain>
-        <NuxtPage></NuxtPage>
-      </UMain>
-    </main>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </UApp>
 </template>
