@@ -13,7 +13,41 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "nuxt-security",
     "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
+
+  // language config
+  i18n: {
+    defaultLocale: "id",
+
+    strategy: "prefix_except_default",
+
+    langDir: "locales/",
+
+    detectBrowserLanguage: false,
+
+    locales: [
+      {
+        code: "id",
+        language: "id-ID",
+        file: "id/index.ts",
+      },
+      {
+        code: "en",
+        language: "en-US",
+        file: "en/index.ts",
+      },
+    ],
+  },
+
+  site: {
+    url: "https://example.com",
+    name: "Nuxt Landing Starter Kit",
+  },
+
+  sitemap: {
+    autoLastmod: true,
+  },
 
   vite: {
     optimizeDeps: {
