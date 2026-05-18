@@ -1,5 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
 const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || "https://example.com";
 const siteName =
   process.env.NUXT_PUBLIC_SITE_NAME || "Nuxt Landing Starter Kit";
@@ -20,6 +18,7 @@ export default defineNuxtConfig({
     "nuxt-security",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    "nuxt-gtag",
   ],
 
   app: {
@@ -78,6 +77,10 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/**": { prerender: true },
+  },
+
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GA_ID,
   },
 
   vite: {
