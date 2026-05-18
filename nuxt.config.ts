@@ -10,9 +10,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   modules: [
+    "motion-v/nuxt",
     "@nuxt/a11y",
     "@nuxt/image",
-    "@nuxt/test-utils",
     "@nuxt/ui",
     "@nuxtjs/device",
     "@nuxtjs/i18n",
