@@ -23,5 +23,8 @@ logs
 .env.*
 !.env.example
 
+# AI Agent
+.agents
+
 # Test coverage
 coverage/

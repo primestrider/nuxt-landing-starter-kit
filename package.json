@@ -17,7 +17,6 @@
   "dependencies": {
     "@nuxt/a11y": "^1.0.0-alpha.1",
     "@nuxt/image": "^2.0.0",
-    "@nuxt/test-utils": "^4.0.3",
     "@nuxt/ui": "^4.7.1",
     "@nuxtjs/device": "^4.0.0",
     "@nuxtjs/i18n": "^10.3.0",
@@ -27,7 +26,6 @@
     "@resvg/resvg-js": "^2.6.2",
     "nuxt": "^4.4.5",
     "nuxt-security": "^2.6.0",
-    "playwright-core": "^1.60.0",
     "satori": "^0.26.0",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
