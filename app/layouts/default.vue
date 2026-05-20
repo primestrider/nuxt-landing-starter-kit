@@ -4,11 +4,9 @@ import HeaderComponent from "~/components/layouts/HeaderComponent.vue";
 </script>
 
 <template>
-  <div class="page-gradient min-h-screen">
-    <HeaderComponent />
-    <UMain>
-      <slot />
-    </UMain>
-    <FooterComponent />
-  </div>
+  <HeaderComponent />
+  <UMain>
+    <slot />
+  </UMain>
+  <FooterComponent />
 </template>
