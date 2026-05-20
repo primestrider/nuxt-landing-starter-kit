@@ -7,20 +7,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
 
-  modules: [
-    "motion-v/nuxt",
-    "@nuxt/a11y",
-    "@nuxt/image",
-    "@nuxt/ui",
-    "@nuxtjs/device",
-    "@nuxtjs/i18n",
-    "@nuxtjs/seo",
-    "nuxt-security",
-    "@nuxtjs/sitemap",
-    "@nuxtjs/robots",
-    "nuxt-gtag",
-  ],
-
   app: {
     head: {
       titleTemplate: `${siteName} | %s`,
@@ -79,8 +65,19 @@ export default defineNuxtConfig({
     "/**": { prerender: true },
   },
 
-  gtag: {
-    id: process.env.NUXT_PUBLIC_GA_ID,
+  $production: {
+    scripts: {
+      // registry: {
+      //   cloudflareWebAnalytics: {
+      //     token: "",
+      //     trigger: "",
+      //   },
+      //   googleAnalytics: {
+      //     id: process.env.NUXT_PUBLIC_GA_ID,
+      //     trigger: "manual",
+      //   },
+      // },
+    },
   },
 
   vite: {
@@ -88,4 +85,18 @@ export default defineNuxtConfig({
       include: ["@vue/devtools-core", "@vue/devtools-kit"],
     },
   },
+
+  modules: [
+    "motion-v/nuxt",
+    "@nuxt/a11y",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxtjs/device",
+    "@nuxtjs/i18n",
+    "@nuxtjs/seo",
+    "nuxt-security",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+    "@nuxt/scripts",
+  ],
 });
